@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/Login.vue'
+import Game from '@/views/Game.vue'
 
 const routes = [
   {
     path: '/',
     name: 'login',
-    component: Login
+    component: Login,
+  },
+  {
+    path: '/game',
+    name: 'game',
+    component: Game,
   },
   {
     path: '/:pathMatch(.*)',
@@ -15,7 +21,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 })
 
 export default router
