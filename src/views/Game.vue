@@ -6,10 +6,12 @@
         <v-text-field
           v-model="state.sizeX"
           type="number"
+          min="1"
           label="Size X" />
         <v-text-field
           v-model="state.sizeY"
           type="number"
+          min="1"
           label="Size Y" />
       </v-card-text>
     </v-card>
