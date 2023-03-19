@@ -1,7 +1,7 @@
 <template>
   <div
     @mouseover="onHover"
-    class="game-block" :class="{ 'selected': isBlue }"></div>
+    class="game-block" :class="{ 'selected': state.isBlue }"></div>
 </template>
 
 <script>
