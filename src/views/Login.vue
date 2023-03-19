@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { defineComponent, reactive, ref, onMounted, onBeforeUnmount, computed } from 'vue'
+import { defineComponent, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
