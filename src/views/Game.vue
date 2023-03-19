@@ -5,9 +5,11 @@
       <v-card-text>
         <v-text-field
           v-model="state.sizeX"
+          type="number"
           label="Size X" />
         <v-text-field
           v-model="state.sizeY"
+          type="number"
           label="Size Y" />
       </v-card-text>
     </v-card>
@@ -32,8 +34,8 @@ export default defineComponent({
   components: { VCard, VCardTitle, VCardText, VTextField, GameField },
   setup() {
     const state = reactive({
-      sizeX: 20,
-      sizeY: 20,
+      sizeX: 10,
+      sizeY: 10,
     })
 
     return { state }

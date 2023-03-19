@@ -1,10 +1,10 @@
 <template>
   <div class="field">
     <div
-      v-for="r in y" :key="r"
+      v-for="r in Number(y)" :key="r"
       class="row" >
       <div
-        v-for="c in y" :key="c"
+        v-for="c in Number(x)" :key="c"
         class="column">
           <game-field-block />
         </div>
@@ -19,8 +19,8 @@ import GameFieldBlock from './GameFieldBlock.vue'
 export default defineComponent({
   name: 'GameField',
   props: {
-    x: { type: Number, required: true },
-    y: { type: Number, required: true },
+    x: { type: [Number, String], required: true },
+    y: { type: [Number, String], required: true },
   },
   components: { GameFieldBlock },
 })
