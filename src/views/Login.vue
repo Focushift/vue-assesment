@@ -35,14 +35,18 @@ import { defineComponent, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
-import { VCard, VCardTitle, VCardActions, VCardText } from 'vuetify/components/VCard'
+import {
+  VCard, VCardTitle, VCardActions, VCardText,
+} from 'vuetify/components/VCard'
 import { VBtn } from 'vuetify/components/VBtn'
 import { VForm } from 'vuetify/components/VForm'
 import { VTextField } from 'vuetify/components/VTextField'
 
 export default defineComponent({
   name: 'LoginPage',
-  components: { VCard, VCardTitle, VCardActions, VCardText, VBtn, VForm, VTextField },
+  components: {
+    VCard, VCardTitle, VCardActions, VCardText, VBtn, VForm, VTextField,
+  },
   setup() {
     const router = useRouter()
     const state = reactive({
@@ -59,7 +63,7 @@ export default defineComponent({
     }
     const v$ = useVuelidate(rules, state)
 
-    async function submit () {
+    async function submit() {
       v$.value.$touch()
       if (v$.value.$invalid) return
       router.push('/game')
@@ -71,8 +75,10 @@ export default defineComponent({
       return error?.$message || ''
     }
 
-    return { state, v$, submit, getError }
-  }
+    return {
+      state, v$, submit, getError,
+    }
+  },
 })
 </script>
 

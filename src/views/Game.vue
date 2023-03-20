@@ -33,7 +33,9 @@ import GameField from '@/components/GameField.vue'
 
 export default defineComponent({
   name: 'GamePage',
-  components: { VCard, VCardTitle, VCardText, VTextField, GameField },
+  components: {
+    VCard, VCardTitle, VCardText, VTextField, GameField,
+  },
   setup() {
     const state = reactive({
       sizeX: 10,
@@ -41,7 +43,7 @@ export default defineComponent({
     })
 
     return { state }
-  }
+  },
 })
 </script>
 

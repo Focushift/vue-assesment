@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+// eslint-disable-next-line
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
+import router from './router'
+import App from './App.vue'
 
 const vuetify = createVuetify({})
 
